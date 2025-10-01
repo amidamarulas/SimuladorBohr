@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+env/
+
+# Distribución y empaquetado
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDEs y editores
+.vscode/
+.idea/
+*.iml
+
+# Notebooks y temporales
+.ipynb_checkpoints/
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Cobertura de pruebas
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
