@@ -1,13 +1,13 @@
 # examples/example_usage.py
 """
-Ejemplo de uso de la librería MBohr.
+Ejemplo de uso de la librería SimuladorBohr.
 Muestra energías, radios, transiciones y genera gráficas.
 """
 
-from MBohr.energy import energy_ev
-from MBohr.radius import radius
-from MBohr.transitions import transition_energy_ev, wavelength, frequency
-from MBohr.plotting import plot_energy_levels, plot_orbits
+from SimuladorBohr.energy import energy_ev
+from SimuladorBohr.radius import radius
+from SimuladorBohr.transitions import transition_energy_ev, wavelength, frequency
+from SimuladorBohr.plotting import plot_energy_levels, plot_orbits
 
 def main():
     Z = 1  # hidrógeno
