@@ -10,7 +10,7 @@ Este archivo documenta los cambios realizados en cada versión de **SimuladorBoh
 
 ---
 
-## [0.1.0] - 2025-09-29
+## [0.1.0] - 2025-10-01
 ### Added
 - Implementación inicial del paquete.
 - Módulo `constants.py` con constantes físicas fundamentales.
