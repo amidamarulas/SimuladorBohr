@@ -13,7 +13,7 @@ def main():
     Z = 1  # hidrógeno
     print("=== Niveles de energía y radios ===")
     for n in range(1,5):
-        print(f"n={n}: E = {energy_ev(n, Z):.3f} eV, r = {radius(n, Z):.2e} m")
+        print(f"n={n}: E = {energy_ev(n, Z):.3f} eV, r = {orbit_radius(n, Z):.2e} m")
 
     print("\n=== Transición 3 → 2 ===")
     dE = transition_energy_ev(3,2,Z)
