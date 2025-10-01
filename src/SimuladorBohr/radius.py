@@ -23,3 +23,4 @@ def summary(Z: int = 1, max_n: int = 5):
 if __name__ == "__main__":
     for n, r in summary(Z=1, max_n=5).items():
         print(f"n={n}: r = {r:.3e} m")
+
