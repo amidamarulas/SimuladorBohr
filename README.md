@@ -20,7 +20,7 @@ Permite calcular energías en diferentes unidades, radios de órbitas electróni
 Clonar el repositorio e instalar en modo editable:
 
 ```bash
-git clone https://github.com/<usuario>/SimuladorBohr.git
+git clone https://github.com/amidamarulas/SimuladorBohr.git
 cd SimuladorBohr
 pip install -e .
 ```
