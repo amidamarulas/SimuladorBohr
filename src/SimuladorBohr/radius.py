@@ -1,46 +1,44 @@
-# src/SimuladorBohr/radius.py
-
 """
-Módulo: radius
-Cálculo del radio de las órbitas electrónicas en el modelo de Bohr.
+SimuladorBohr - radius.py
+-----------------
 
-Este módulo utiliza las constantes físicas definidas en `constants.py` 
-para calcular el radio de Bohr y el radio de la órbita correspondiente 
-a un número cuántico principal n.
+Este módulo contiene funciones para calcular los radios de las órbitas
+electrónicas en el modelo atómico de Bohr.
 """
 
-from . import constants as c
+from .constants import A_0
 
-
-def bohr_radius() -> float:
+def radius(n: int, Z: int = 1) -> float:
     """
-    Devuelve el radio de Bohr (a₀) en metros.
-    """
-    return (c.HBAR**2) / (c.M_E * c.E_CHARGE**2 / (4 * c.PI * c.EPSILON_0))
+    Calcula el radio de la órbita n para un átomo con número atómico Z.
 
+    Fórmula:
+        r_n = A_0 * (n^2 / Z)
 
-def orbit_radius(n: int) -> float:
-    """
-    Calcula el radio de la órbita para un nivel cuántico principal n
-    en el átomo de hidrógeno (modelo de Bohr).
-
-    Parámetros:
+    Parámetros
     ----------
     n : int
         Número cuántico principal (n >= 1).
+    Z : int, opcional
+        Número atómico. Por defecto 1 (hidrógeno).
 
-    Retorna:
+    Retorna
     -------
     float
         Radio de la órbita en metros.
     """
     if n < 1:
-        raise ValueError("El número cuántico principal n debe ser mayor o igual a 1.")
-    return n**2 * bohr_radius()
+        raise ValueError("El número cuántico principal n debe ser >= 1.")
 
+    return A_0 * (n**2 / Z)
 
-# Ejemplo de uso interno (se puede borrar o dejar como test rápido)
+def summary(Z: int = 1, max_n: int = 5):
+    """Genera un diccionario con los radios de las primeras órbitas."""
+    data = {}
+    for n in range(1, max_n + 1):
+        data[n] = radius(n, Z)
+    return data
+
 if __name__ == "__main__":
-    print("Radio de Bohr (a0):", bohr_radius(), "m")
-    for n in range(1, 4):
-        print(f"Radio de la órbita n={n}: {orbit_radius(n)} m")
+    for n, r in summary(Z=1, max_n=5).items():
+        print(f"n={n}: r = {r:.3e} m")
