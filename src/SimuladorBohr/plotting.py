@@ -1,14 +1,18 @@
 """
-Funciones de visualización del modelo de SimuladorBohr.
-Permite graficar niveles de energía y órbitas electrónicas.
+SimuladorBohr - plotting.py
+---------------------------
+
+Funciones de visualización del modelo de Bohr:
+niveles de energía y órbitas electrónicas.
 """
 
 import matplotlib.pyplot as plt
 import numpy as np
 from .energy import energy_ev
-from .radius import radius
+from .radius import orbit_radius
 
 def plot_energy_levels(Z=1, max_n=6, show=True):
+    """Grafica los niveles de energía en eV."""
     ns = list(range(1, max_n+1))
     energies = [energy_ev(n, Z) for n in ns]
 
@@ -27,7 +31,8 @@ def plot_energy_levels(Z=1, max_n=6, show=True):
     return fig, ax
 
 def plot_orbits(Z=1, ns=(1,2,3), show=True):
-    radii = [radius(n, Z) for n in ns]
+    """Grafica órbitas electrónicas para un conjunto de niveles n."""
+    radii = [orbit_radius(n, Z) for n in ns]
     theta = np.linspace(0, 2*np.pi, 400)
 
     fig, ax = plt.subplots()
