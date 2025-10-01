@@ -1,4 +1,4 @@
-# src/MBohr/transitions.py
+# src/SimuladorBohr/transitions.py
 """
 Módulo para cálculos de transiciones electrónicas en el modelo de Bohr.
 Incluye funciones para energía, frecuencia y longitud de onda de fotones emitidos/absorbidos.
