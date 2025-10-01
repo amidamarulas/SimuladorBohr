@@ -2,29 +2,23 @@
 SimuladorBohr - radius.py
 -----------------
 
-Este módulo contiene funciones para calcular los radios de las órbitas
-electrónicas en el modelo atómico de Bohr.
+Funciones para calcular los radios orbitales en el modelo de Bohr.
 """
 
 from .constants import A_0
 
-def radius(n: int, Z: int = 1) -> float:
+def orbit_radius(n: int, Z: int = 1) -> float:
     """
     Calcula el radio de la órbita n para un átomo con número atómico Z.
-
-    Fórmula:
-        r_n = A_0 * (n^2 / Z)
+    r_n = A_0 * (n^2 / Z)
     """
     if n < 1:
         raise ValueError("El número cuántico principal n debe ser >= 1.")
     return A_0 * (n**2 / Z)
 
 def summary(Z: int = 1, max_n: int = 5):
-    """Genera un diccionario con los radios de las primeras órbitas."""
-    data = {}
-    for n in range(1, max_n + 1):
-        data[n] = radius(n, Z)
-    return data
+    """Devuelve un diccionario con {n: r_n} para los primeros niveles."""
+    return {n: orbit_radius(n, Z) for n in range(1, max_n+1)}
 
 if __name__ == "__main__":
     for n, r in summary(Z=1, max_n=5).items():
