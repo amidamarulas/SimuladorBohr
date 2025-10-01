@@ -1,4 +1,3 @@
-# src/SimuladorBohr/plotting.py
 """
 Funciones de visualización del modelo de SimuladorBohr.
 Permite graficar niveles de energía y órbitas electrónicas.
