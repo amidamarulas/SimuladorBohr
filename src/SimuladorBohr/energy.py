@@ -1,5 +1,5 @@
 """
-MBohr - energy.py
+SimuladorBohr - energy.py
 -----------------
 
 Este módulo contiene funciones para calcular las energías de los niveles
