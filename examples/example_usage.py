@@ -5,7 +5,7 @@ Muestra energías, radios, transiciones y genera gráficas.
 """
 
 from SimuladorBohr.energy import energy_ev
-from SimuladorBohr.radius import radius
+from SimuladorBohr.radius import orbit_radius
 from SimuladorBohr.transitions import transition_energy_ev, wavelength, frequency
 from SimuladorBohr.plotting import plot_energy_levels, plot_orbits
 
