@@ -1,6 +1,6 @@
-# src/MBohr/plotting.py
+# src/SimuladorBohr/plotting.py
 """
-Funciones de visualización del modelo de Bohr.
+Funciones de visualización del modelo de SimuladorBohr.
 Permite graficar niveles de energía y órbitas electrónicas.
 """
 
